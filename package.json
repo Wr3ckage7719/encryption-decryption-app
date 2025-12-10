@@ -1,0 +1,21 @@
+{
+  "name": "encryption-decryption-app",
+  "version": "1.0.0",
+  "description": "Encryption and Decryption Web Application with Multiple Methods",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build step required for static files'",
+    "start": "node server.js"
+  },
+  "keywords": ["encryption", "decryption", "crypto", "security"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "vercel": "^33.0.0"
+  }
+}

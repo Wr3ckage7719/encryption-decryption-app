@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Encrypt and decrypt data using multiple encryption methods">
+    <title>Encryption & Decryption Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>🔒 Encryption & Decryption Tool</h1>
+                <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+                    🌙
+                </button>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <!-- Method Selection -->
+            <section class="card">
+                <h2 class="section-title">Encryption Method</h2>
+                <div class="method-selector">
+                    <select id="methodSelect" class="select-input">
+                        <option value="caesar">Caesar Cipher (Shift by 3)</option>
+                        <option value="reverse">Reverse Text</option>
+                        <option value="base64">Base64 Encoding</option>
+                        <option value="hex">Hexadecimal Encoding</option>
+                        <option value="morse">Morse Code</option>
+                        <option value="binary">Binary (8-bit)</option>
+                        <option value="atbash">Atbash Cipher</option>
+                        <option value="rot13">ROT13 Cipher</option>
+                    </select>
+                </div>
+                <div id="methodInfo" class="method-info">
+                    <p>Select an encryption method. No passwords needed - just text in, encrypted text out!</p>
+                </div>
+            </section>
+
+            <!-- Encryption Section -->
+            <section class="card">
+                <h2 class="section-title">🔒 Encryption</h2>
+                
+                <label for="encryptInput" class="label">Type your text here:</label>
+                <textarea 
+                    id="encryptInput" 
+                    class="textarea" 
+                    placeholder="Type your text here..."
+                    rows="5"
+                ></textarea>
+                
+                <button id="encryptBtn" class="btn btn-primary full-width">
+                    🔒 Encrypt
+                </button>
+                
+                <div class="output-section">
+                    <label for="encryptOutput" class="label">Encrypted Output:</label>
+                    <textarea 
+                        id="encryptOutput" 
+                        class="textarea output-textarea" 
+                        placeholder="Encrypted text will appear here..."
+                        rows="5"
+                        readonly
+                    ></textarea>
+                    <button id="copyEncryptBtn" class="btn btn-secondary">
+                        📋 Copy
+                    </button>
+                </div>
+            </section>
+
+            <!-- Decryption Section -->
+            <section class="card">
+                <h2 class="section-title">🔓 Decryption</h2>
+                
+                <label for="decryptInput" class="label">Paste encrypted text here:</label>
+                <textarea 
+                    id="decryptInput" 
+                    class="textarea" 
+                    placeholder="Paste encrypted text here..."
+                    rows="5"
+                ></textarea>
+                
+                <button id="decryptBtn" class="btn btn-success full-width">
+                    🔓 Decrypt
+                </button>
+                
+                <div class="output-section">
+                    <label for="decryptOutput" class="label">Decrypted Output:</label>
+                    <textarea 
+                        id="decryptOutput" 
+                        class="textarea output-textarea" 
+                        placeholder="Decrypted text will appear here..."
+                        rows="5"
+                        readonly
+                    ></textarea>
+                    <button id="copyDecryptBtn" class="btn btn-secondary">
+                        📋 Copy
+                    </button>
+                </div>
+            </section>
+
+            <!-- Status Message -->
+            <div id="statusMessage" class="status-message"></div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>⚠️ Simple text encryption - for educational purposes only!</p>
+            <p>© 2025 Encryption Tool</p>
+        </footer>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="spinner"></div>
+        <p>Processing...</p>
+    </div>
+
+    <script src="utils.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
