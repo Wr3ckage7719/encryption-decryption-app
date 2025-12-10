@@ -44,9 +44,31 @@ body {
 }
 
 .container {
-    max-width: 680px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 40px 20px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.method-card {
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.side-card {
+    width: 100%;
 }
 
 /* Header */
@@ -520,6 +542,12 @@ body {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 768px) {
     .container {
         padding: 12px;
