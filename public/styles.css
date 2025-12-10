@@ -95,6 +95,26 @@ body {
     gap: 12px;
 }
 
+.icon-lock {
+    width: 28px;
+    height: 28px;
+}
+
+.icon-theme {
+    width: 20px;
+    height: 20px;
+}
+
+.icon-sm {
+    width: 20px;
+    height: 20px;
+}
+
+.icon-btn {
+    width: 18px;
+    height: 18px;
+}
+
 .theme-toggle {
     position: absolute;
     right: 0;

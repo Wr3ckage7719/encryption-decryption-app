@@ -12,9 +12,25 @@
         <!-- Header -->
         <header class="header">
             <div class="header-content">
-                <h1>🔒 Encryption & Decryption Tool</h1>
+                <h1>
+                    <svg class="icon-lock" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="5" y="11" width="14" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+                        <path d="M7 11V7C7 4.79086 8.79086 3 11 3H13C15.2091 3 17 4.79086 17 7V11" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                    Encryption & Decryption Tool
+                </h1>
                 <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
-                    🌙
+                    <svg class="icon-theme" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                        <line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
                 </button>
             </div>
         </header>
@@ -44,7 +60,13 @@
             <div class="cards-container">
                 <!-- Encryption Section -->
                 <section class="card side-card">
-                    <h2 class="section-title">🔒 Encryption</h2>
+                    <h2 class="section-title">
+                        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="5" y="11" width="14" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M7 11V7C7 4.79086 8.79086 3 11 3H13C15.2091 3 17 4.79086 17 7V11" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        Encryption
+                    </h2>
                     
                     <label for="encryptInput" class="label">Type your text here:</label>
                     <textarea 
@@ -55,7 +77,12 @@
                     ></textarea>
                     
                     <button id="encryptBtn" class="btn btn-primary full-width">
-                        🔒 Encrypt
+                        <svg class="icon-btn" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        </svg>
+                        Encrypt
                     </button>
                     
                     <div class="output-section">
@@ -68,14 +95,24 @@
                             readonly
                         ></textarea>
                         <button id="copyEncryptBtn" class="btn btn-secondary">
-                            📋 Copy
+                            <svg class="icon-btn" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M5 15H4C2.89543 15 2 14.1046 2 13V4C2 2.89543 2.89543 2 4 2H13C14.1046 2 15 2.89543 15 4V5" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            Copy
                         </button>
                     </div>
                 </section>
 
                 <!-- Decryption Section -->
                 <section class="card side-card">
-                    <h2 class="section-title">🔓 Decryption</h2>
+                    <h2 class="section-title">
+                        <svg class="icon-sm" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="5" y="11" width="14" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M7 11V7C7 4.79086 8.79086 3 11 3H13C15.2091 3 17 4.79086 17 7V9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Decryption
+                    </h2>
                     
                     <label for="decryptInput" class="label">Paste encrypted text here:</label>
                     <textarea 
@@ -86,7 +123,12 @@
                     ></textarea>
                     
                     <button id="decryptBtn" class="btn btn-success full-width">
-                        🔓 Decrypt
+                        <svg class="icon-btn" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 12L12 2L2 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M2 12L12 22L22 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M7 12L12 17L17 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        </svg>
+                        Decrypt
                     </button>
                     
                     <div class="output-section">
@@ -99,7 +141,11 @@
                             readonly
                         ></textarea>
                         <button id="copyDecryptBtn" class="btn btn-secondary">
-                            📋 Copy
+                            <svg class="icon-btn" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2"/>
+                                <path d="M5 15H4C2.89543 15 2 14.1046 2 13V4C2 2.89543 2.89543 2 4 2H13C14.1046 2 15 2.89543 15 4V5" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                            Copy
                         </button>
                     </div>
                 </section>
