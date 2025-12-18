@@ -63,13 +63,23 @@ body {
 
 .cards-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
+    /* two columns constrained to reasonable card widths and centered */
+    grid-template-columns: repeat(2, minmax(320px, 480px));
+    gap: 32px;
     justify-content: center;
+    margin: 0 auto;
+    align-items: start;
 }
 
 .side-card {
     width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.card {
+    /* ensure cards don't expand beyond their column */
+    box-sizing: border-box;
 }
 
 /* Landing selector styles */
