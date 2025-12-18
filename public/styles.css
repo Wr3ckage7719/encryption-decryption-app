@@ -71,6 +71,54 @@ body {
     width: 100%;
 }
 
+/* Landing selector styles */
+.landing-card {
+    text-align: center;
+    padding: 36px;
+    margin-bottom: 28px;
+}
+
+.landing-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.modal[aria-hidden="false"] {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: 12px;
+    width: 420px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    border: 1px solid var(--border-color);
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 12px;
+}
+
 /* Header */
 .header {
     text-align: center;

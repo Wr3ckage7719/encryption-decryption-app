@@ -35,7 +35,16 @@
             </div>
         </header>
 
-        <main class="main-content">
+        <!-- Landing Selector -->
+        <section id="landing" class="card landing-card">
+            <h2 class="section-title">Choose an action</h2>
+            <div class="landing-actions">
+                <button id="chooseEncrypt" class="btn btn-primary">Encrypt text</button>
+                <button id="chooseDecrypt" class="btn btn-success">Decrypt text</button>
+            </div>
+        </section>
+
+        <main class="main-content" style="display:none;">
             <!-- Method Selection -->
             <section class="card method-card">
                 <h2 class="section-title">Encryption Method</h2>
@@ -75,6 +84,9 @@
                         placeholder="Type your text here..."
                         rows="5"
                     ></textarea>
+
+                    <label for="encryptPassword" class="label">Optional password (encrypt):</label>
+                    <input id="encryptPassword" class="text-input" type="password" placeholder="Optional password to protect output">
                     
                     <button id="encryptBtn" class="btn btn-primary full-width">
                         <svg class="icon-btn" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -121,6 +133,9 @@
                         placeholder="Paste encrypted text here..."
                         rows="5"
                     ></textarea>
+
+                    <label for="decryptPassword" class="label">Optional password (decrypt):</label>
+                    <input id="decryptPassword" class="text-input" type="password" placeholder="If the text requires a password, enter it here">
                     
                     <button id="decryptBtn" class="btn btn-success full-width">
                         <svg class="icon-btn" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -160,6 +175,19 @@
             <p>⚠️ Simple text encryption - for educational purposes only!</p>
             <p>© 2025 Encryption Tool</p>
         </footer>
+    </div>
+
+    <!-- Password Modal -->
+    <div id="passwordModal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <h3>Protected Text Detected</h3>
+            <p>This text appears to be password-protected. Enter the password to continue.</p>
+            <input id="modalPasswordInput" type="password" class="text-input" placeholder="Enter password">
+            <div class="modal-actions">
+                <button id="modalCancel" class="btn btn-secondary">Cancel</button>
+                <button id="modalConfirm" class="btn btn-primary">Confirm</button>
+            </div>
+        </div>
     </div>
 
     <!-- Loading Overlay -->
