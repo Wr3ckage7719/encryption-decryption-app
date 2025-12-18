@@ -56,18 +56,18 @@ body {
 }
 
 .method-card {
-    max-width: 600px;
+    max-width: 960px;
     margin: 0 auto;
     width: 100%;
 }
 
 .cards-container {
     display: grid;
-    /* two columns constrained to reasonable card widths and centered */
-    grid-template-columns: repeat(2, minmax(320px, 480px));
-    gap: 32px;
-    justify-content: center;
+    /* keep container width aligned with method card */
+    max-width: 960px;
     margin: 0 auto;
+    grid-template-columns: repeat(2, minmax(340px, 1fr));
+    gap: 32px;
     align-items: start;
 }
 
