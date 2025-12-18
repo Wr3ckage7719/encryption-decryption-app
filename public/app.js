@@ -48,16 +48,28 @@ function initializeEventListeners() {
     const landing = document.getElementById('landing');
     const main = document.querySelector('.main-content');
     if (landing) {
+        const backLink = document.getElementById('backToLanding');
         document.getElementById('chooseEncrypt').addEventListener('click', () => {
             landing.style.display = 'none';
             main.style.display = '';
+            if (backLink) backLink.style.display = 'block';
             showSection('encrypt');
         });
         document.getElementById('chooseDecrypt').addEventListener('click', () => {
             landing.style.display = 'none';
             main.style.display = '';
+            if (backLink) backLink.style.display = 'block';
             showSection('decrypt');
         });
+
+        // Back link handler
+        if (backLink) {
+            backLink.addEventListener('click', () => {
+                landing.style.display = '';
+                main.style.display = 'none';
+                backLink.style.display = 'none';
+            });
+        }
     }
 
     // Modal events

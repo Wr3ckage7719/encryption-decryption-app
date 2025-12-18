@@ -65,6 +65,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 24px;
+    justify-content: center;
 }
 
 .side-card {
@@ -74,8 +75,16 @@ body {
 /* Landing selector styles */
 .landing-card {
     text-align: center;
-    padding: 36px;
+    padding: 24px;
     margin-bottom: 28px;
+    width: 360px;
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .landing-actions {
@@ -84,6 +93,17 @@ body {
     justify-content: center;
     margin-top: 16px;
 }
+
+/* Back link */
+.back-link {
+    display: none;
+    text-align: center;
+    color: var(--text-secondary);
+    margin: 12px auto;
+    font-size: 14px;
+    cursor: pointer;
+}
+.back-link:hover { text-decoration: underline; }
 
 /* Modal */
 .modal {
