@@ -14,6 +14,7 @@
     --accent-warning: #f59e0b;
     --accent-danger: #ef4444;
     --shadow: rgba(0, 0, 0, 0.08);
+    --content-max-width: 640px;
 }
 
 [data-theme="dark"] {
@@ -56,7 +57,7 @@ body {
 }
 
 .method-card {
-    max-width: 640px;
+    max-width: var(--content-max-width);
     margin: 0 auto;
     width: 100%;
 }
@@ -64,7 +65,7 @@ body {
 .cards-container {
     display: grid;
     /* single column stacked layout so cards are centered under method card */
-    max-width: 640px;
+    max-width: var(--content-max-width);
     margin: 0 auto;
     grid-template-columns: 1fr;
     gap: 24px;
@@ -73,7 +74,7 @@ body {
 
 .side-card {
     width: 100%;
-    max-width: 640px;
+    max-width: var(--content-max-width);
     margin: 0 auto;
 }
 
