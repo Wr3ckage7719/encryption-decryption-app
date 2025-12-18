@@ -56,24 +56,24 @@ body {
 }
 
 .method-card {
-    max-width: 960px;
+    max-width: 640px;
     margin: 0 auto;
     width: 100%;
 }
 
 .cards-container {
     display: grid;
-    /* keep container width aligned with method card */
-    max-width: 960px;
+    /* single column stacked layout so cards are centered under method card */
+    max-width: 640px;
     margin: 0 auto;
-    grid-template-columns: repeat(2, minmax(340px, 1fr));
-    gap: 32px;
+    grid-template-columns: 1fr;
+    gap: 24px;
     align-items: start;
 }
 
 .side-card {
     width: 100%;
-    max-width: 480px;
+    max-width: 640px;
     margin: 0 auto;
 }
 
